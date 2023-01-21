@@ -1,18 +1,18 @@
 # Prüfungseinteilung
 
-Das ist ein Python-Skript zum Verteilen von Prüfungen auf Prüfer. Etwas genauer ist es ein Jupyterlab-File. Folgendes ist zu beachten:
+Das ist ein Python-Skript zum Verteilen von Prüfungen auf Prüfer. Etwas genauer ist es ein Jupyter-Notebook.
 
-1) Um jupyterlab zu installieren, muss man 
+1) Um jupyter notebook zu installieren, muss man 
 
 ```
 pip install ipykernel
-pip install jupyterlab
+pip install notebook
 ```
 
 ausführen. Um das File einteilung.ipynb verwenden zu können, gibt man in der Kommandozeile im Ordner, der die entprechenden Dateien enthält (siehe 4)
 
 ```
-jupyter lab
+jupyter notebook einteilung.ipynb
 ```
 
 ein. Dies öffnet in einem Browser eine Ansicht, bei der man zunächst aus der linken Spalte Dateien auswählen kann. Die Datei, die nun alle Kommandos beinhaltet, ist einteilung.ipynb. Hier wechseln sich Text-Felder und Code-Felder ab. Mittels des Play-Buttons oder Shift+Return führt man jeweils eine Zelle (auch Chunk genannt) aus. 
