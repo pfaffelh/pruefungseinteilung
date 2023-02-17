@@ -207,12 +207,12 @@ def check_prüferwünsche_und_slots(prüferwünsche_csv, zuordnungen_csv, prüfu
 
     error = False
     for prüfer in prüfer_list:
-        if prüfungszahl_from_prüfungsslots[prüfer] > prüfungszahl_from_prüferwünsche[prüfer]:
-            print(f"Warnung: Prüfer {prüfer} bietet mehr Slots an als in {prüerwünsche_csv} angegeben!")
-        if prüfungszahl_from_zuordnungen[prüfer] > prüfungszahl_from_prüfungsslots[prüfer]:
-            print(f"Fehler: Prüfer {prüfer} hat nur {prüfungszahl_from_prüfungsslots[prüfer]} Prüfungsslots angegeben, muss aber {prüfungszahl_from_zuordnungen[prüfer]} Prüfungen abnehmen (siehe {zuordnungen_csv})!")
+#        if prüfungszahl_from_prüfungsslots.get(prüfer, 0) > prüfungszahl_from_prüferwünsche.get(prüfer,0):
+#            print(f"Warnung: Prüfer {prüfer} bietet mehr Slots an als in {prüferwünsche_csv} angegeben!")
+        if prüfungszahl_from_zuordnungen.get(prüfer,0) > prüfungszahl_from_prüfungsslots.get(prüfer,0):
+            print(f"Fehler: Prüfer {prüfer} hat nur {prüfungszahl_from_prüfungsslots.get(prüfer,0)} Prüfungsslots angegeben, muss aber {prüfungszahl_from_zuordnungen.get(prüfer,0)} Prüfungen abnehmen (siehe {zuordnungen_csv})!")
             error = True
-        return error
+    return error
 
 def make_zuordnungen_zu_slots(prüfungsslots_csv, zuordnungen_csv):
     zuordnungen = pd.read_csv(zuordnungen_csv)
