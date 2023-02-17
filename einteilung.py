@@ -49,7 +49,7 @@ def compute_fach_from_studiengang_pruefung(df_row):
     fach = ""
     if((df_row['studiengang'] == "lehramt") & (df_row['pruefung'] == "analysis")):
         fach = "Analysis I+II"
-    elif ((df_row['studiengang'] == "bsc") & (df_row['pruefung'] == "analysis")):
+    elif ((df_row['studiengang'] == "bachelor") & (df_row['pruefung'] == "analysis")):
         fach = "Analysis I-III"
     elif (df_row['pruefung'] == "linalg"):
         fach = "Lineare Algebra"
